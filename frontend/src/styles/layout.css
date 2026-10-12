@@ -1,0 +1,772 @@
+/* =========================================================
+   KLEARSTUDY — PREMIUM APP LAYOUT
+   Light Mode + Dark Mode
+========================================================= */
+
+
+/* =========================================================
+   1. APP SHELL
+========================================================= */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+
+/* =========================================================
+   2. SIDEBAR
+========================================================= */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  z-index: 20;
+  overflow-y: auto;
+
+  transition:
+    width var(--transition-normal),
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+
+/* =========================================================
+   3. BRAND
+========================================================= */
+
+.brand {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid var(--border);
+
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: #ffffff;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  margin-right: 11px;
+
+  box-shadow:
+    0 5px 14px rgba(99, 102, 241, 0.25);
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+
+  color: var(--text-primary);
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   4. SIDEBAR NAVIGATION
+========================================================= */
+
+.sidebar-nav {
+  padding: 24px 13px;
+  flex: 1;
+}
+
+.nav-section-title {
+  padding: 0 12px;
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+
+  color: var(--text-muted);
+}
+
+.nav-item {
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 13px;
+  margin-bottom: 5px;
+
+  border-radius: 11px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 1px solid transparent;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.nav-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+
+  transform: translateX(2px);
+}
+
+.nav-item-active {
+  background: var(--primary-light);
+  color: var(--primary);
+
+  border-color: var(--primary-border);
+
+  font-weight: 700;
+}
+
+.nav-item-active:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.nav-icon {
+  width: 30px;
+  min-width: 30px;
+
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   5. SIDEBAR STATUS
+========================================================= */
+
+.sidebar-bottom {
+  padding: 15px;
+  flex-shrink: 0;
+}
+
+.ai-status {
+  padding: 13px;
+
+  border-radius: 12px;
+
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  background: #22c55e;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.10);
+}
+
+.status-title {
+  font-size: 12px;
+  font-weight: 700;
+
+  color: var(--text-primary);
+}
+
+.status-text {
+  margin-top: 2px;
+
+  font-size: 10px;
+
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   6. MAIN AREA
+========================================================= */
+
+.main-area {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+
+  min-height: 100vh;
+  min-width: 0;
+
+  background: var(--bg-primary);
+
+  transition:
+    background-color var(--transition-normal);
+}
+
+
+/* =========================================================
+   7. TOPBAR
+========================================================= */
+
+.topbar {
+  min-height: 82px;
+
+  background: var(--topbar-bg);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+  padding: 0 32px;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.topbar-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+
+  color: var(--text-primary);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   8. ICON BUTTONS
+========================================================= */
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  background: var(--surface);
+  color: var(--text-primary);
+
+  cursor: pointer;
+  font-size: 17px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.icon-button:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.icon-button:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   9. THEME TOGGLE
+========================================================= */
+
+.theme-toggle {
+  background: var(--primary-light);
+  border-color: var(--primary-border);
+}
+
+.theme-toggle:hover {
+  background: var(--bg-hover);
+  border-color: var(--primary);
+}
+
+
+/* =========================================================
+   10. USER PROFILE
+========================================================= */
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.profile-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+
+  color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.profile-info {
+  min-width: 0;
+}
+
+.profile-name {
+  font-size: 12px;
+  font-weight: 800;
+
+  color: var(--text-primary);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  max-width: 150px;
+}
+
+.profile-role {
+  font-size: 10px;
+
+  color: var(--text-muted);
+
+  margin-top: 2px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  max-width: 150px;
+}
+
+
+/* =========================================================
+   11. LOGOUT BUTTON
+========================================================= */
+
+.logout-button {
+  min-width: 36px;
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 4px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: var(--surface);
+  color: var(--text-secondary);
+
+  padding: 7px 10px;
+
+  cursor: pointer;
+  font-size: 14px;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.logout-button:hover {
+  background: var(--danger-bg);
+  border-color: var(--danger);
+  color: var(--danger);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   12. PAGE CONTAINER
+========================================================= */
+
+.page-container {
+  min-height: calc(100vh - 82px);
+
+  padding: 32px;
+
+  background: var(--bg-primary);
+
+  transition:
+    background-color var(--transition-normal);
+}
+
+
+/* =========================================================
+   13. PLACEHOLDER PAGE
+========================================================= */
+
+.placeholder-page {
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+.placeholder-icon {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.placeholder-page h1 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: var(--text-primary);
+}
+
+.placeholder-page p {
+  margin: 0;
+
+  color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   14. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+  .sidebar {
+    width: 72px;
+  }
+
+  .brand {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    margin: 0;
+  }
+
+  .brand-name,
+  .brand-subtitle,
+  .nav-section-title,
+  .nav-item span:not(.nav-icon),
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .sidebar-nav {
+    padding: 22px 9px;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .nav-item:hover {
+    transform: none;
+  }
+
+  .nav-icon {
+    width: auto;
+    min-width: 0;
+
+    justify-content: center;
+  }
+
+  .main-area {
+    width: calc(100% - 72px);
+    margin-left: 72px;
+  }
+
+  .topbar {
+    padding: 0 22px;
+  }
+
+  .page-container {
+    padding: 25px;
+  }
+}
+
+
+/* =========================================================
+   15. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .topbar {
+    min-height: 70px;
+
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .topbar-title {
+    font-size: 14px;
+  }
+
+  .topbar-right {
+    gap: 7px;
+  }
+
+  .icon-button {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .profile {
+    gap: 0;
+  }
+
+  .profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+    margin-right: 0;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .logout-button {
+    min-width: 32px;
+    min-height: 34px;
+
+    margin-left: 5px;
+    padding: 5px;
+  }
+
+  .page-container {
+    min-height: calc(100vh - 70px);
+    padding: 20px 15px;
+  }
+
+  .placeholder-page {
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  .placeholder-page h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   16. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .sidebar {
+    width: 58px;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+
+    font-size: 19px;
+  }
+
+  .sidebar-nav {
+    padding: 18px 5px;
+  }
+
+  .nav-item {
+    min-height: 42px;
+  }
+
+  .main-area {
+    width: calc(100% - 58px);
+    margin-left: 58px;
+  }
+
+  .topbar {
+    padding: 0 8px;
+  }
+
+  .topbar-right {
+    gap: 5px;
+  }
+
+  .page-container {
+    padding: 16px 10px;
+  }
+}
+
+
+/* =========================================================
+   17. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-item,
+  .icon-button,
+  .logout-button,
+  .sidebar,
+  .main-area,
+  .topbar,
+  .page-container {
+    transition: none;
+  }
+}
+/* =====================================================
+   KLEARSTUDY — GLOBAL LAYOUT OVERFLOW FIX
+===================================================== */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app-shell {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+}
+
+.page-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.progress-page {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.stats-grid,
+.lesson-list,
+.topic-grid,
+.priority-list {
+  width: 100%;
+  min-width: 0;
+}
+
+.stat-card,
+.lesson-card,
+.topic-panel,
+.priority-item {
+  min-width: 0;
+}

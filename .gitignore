@@ -1,0 +1,60 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+venv/
+.venv/
+env/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded files and generated data
+storage/uploads/
+uploads/
+storage/
+*.pdf
+*.docx
+*.pptx
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Logs and temporary files
+*.log
+logs/
+.tmp/
+temp/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Local AI cache
+backend/data/learning_intelligence_cache*.json
+
+# Local Python virtual environment
+backend/venv/
+
+# Python bytecode
+backend/__pycache__/
+**/__pycache__/
+
+# Accidental empty filesbackend/uvicorn
+backend/uvicorn
+# Accidental empty files
+/frontend/(
+/frontend/0
+/frontend/{
+/git
+/backend/uvicorn
