@@ -424,3 +424,6 @@ Check for missing major sections before finalizing.
 Do not produce a brief summary when the lesson requires detailed explanations.
 
 Return the study guide itself without describing these instructions.
+LESSON CONTENT TO SUMMARIZE:
+
+{{LESSON_TEXT}}

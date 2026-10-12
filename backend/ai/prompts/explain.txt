@@ -384,3 +384,6 @@ If any important explanation is missing, improve the response before
 returning it.
 
 Your final response must teach the student, not merely summarize the text.
+LESSON CONTENT TO EXPLAIN:
+
+{{LESSON_TEXT}}

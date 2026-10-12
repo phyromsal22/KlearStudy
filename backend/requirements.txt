@@ -9,3 +9,7 @@ pypdf
 python-docx
 python-pptx
 sqlalchemy
+PyJWT
+pwdlib[argon2]
+PyMuPDF
+openai
