@@ -22,79 +22,79 @@ export default defineConfig({
 
       "/auth": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/lessons": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/qcm": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/attempts": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/progress": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/exams": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/summary": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/explain": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/translate": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/chat": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/file_analysis": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/topic": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 
       "/review": {
         target:
-          "https://klearstudy-2.onrender.com",
+          "https://klearstudy-backend.onrender.com",
         changeOrigin: true,
       },
 

@@ -3,7 +3,7 @@ import "./Progress.css";
 
 const API_BASE =
   import.meta.env.VITE_API_URL?.replace(/\/$/, "") ||
-  "https://klearstudy-2.onrender.com";
+  "https://klearstudy-backend.onrender.com";
 
 function apiUrl(path) {
   return `${API_BASE}${path.startsWith("/") ? path : `/${path}`}`;
