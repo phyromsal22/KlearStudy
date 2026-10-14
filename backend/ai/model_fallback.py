@@ -26,7 +26,7 @@ class ModelFallback:
 
     DEEPSEEK_MODELS = [
         "deepseek-flash",
-        "deepseek-v4-pro",
+        "deepseek-chat",
     ]
 
     DEFAULT_GEMINI_COOLDOWN_SECONDS = 60

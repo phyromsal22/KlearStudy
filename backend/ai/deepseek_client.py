@@ -15,7 +15,7 @@ class DeepSeekClient:
     """
 
     BASE_URL = "https://api.deepseek.com"
-    TIMEOUT_SECONDS = 30.0
+    TIMEOUT_SECONDS = 180.0
 
     def __init__(self):
         api_key = os.getenv("DEEPSEEK_API_KEY")
