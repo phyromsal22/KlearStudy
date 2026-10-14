@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./Translation.css";
 
-const API_URL = "https://klearstudy-backend.sabay.com";
+const API_URL = "https://klearstudy-backend-1fvgp1mv5h8lur.sabay.com";
 
 const MAX_CHARACTERS = 50000;
 
