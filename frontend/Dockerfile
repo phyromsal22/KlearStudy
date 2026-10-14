@@ -14,15 +14,11 @@ RUN npm run build
 
 FROM nginxinc/nginx-unprivileged:alpine
 
-# បង្កើតឯកសារ PID ជាមុន និងកំណត់សិទ្ធិឱ្យអ្នកប្រើ nginx
-USER root
-RUN touch /tmp/nginx.pid && chown nginx:nginx /tmp/nginx.pid
-USER nginx
-
 COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx.conf /app/nginx.conf
+
+# ចម្លង Config ផ្ទាល់ខ្លួនទៅជំនួស default.conf ដែលមានស្រាប់
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
-# ប្រើ -g ដើម្បីកំណត់ PID តែមួយគត់ និងធានាថា Nginx ដំណើរការនៅ foreground
-CMD ["nginx", "-c", "/app/nginx.conf", "-g", "pid /tmp/nginx.pid; daemon off;"]
+# មិនកំណត់ CMD ទេ ដើម្បីឱ្យវាប្រើ Entrypoint ដើមរបស់ Image
