@@ -1,6 +1,6 @@
 const API_BASE =
   import.meta.env.VITE_API_URL?.replace(/\/$/, "") ||
-  "https://klearstudy-backend.onrender.com";
+  "https://klearstudy-backend.sabay.com";
 
 /* =========================================================
    AUTH STORAGE

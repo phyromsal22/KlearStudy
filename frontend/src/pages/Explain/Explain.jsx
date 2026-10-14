@@ -260,7 +260,7 @@ async function generateExplanation(
 
   const request =
     fetch(
-        `https://klearstudy-backend.onrender.com/lessons/${lessonId}/explain`,
+        `https://klearstudy-backend.sabay.com/lessons/${lessonId}/explain`,
       {
         method: "POST",
 

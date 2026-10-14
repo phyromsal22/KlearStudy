@@ -5,7 +5,7 @@ import { getAccessToken, clearAuth } from "../../services/api";
 
 const API_BASE =
   import.meta.env.VITE_API_URL?.replace(/\/$/, "") ||
-  "https://klearstudy-backend.onrender.com";
+  "https://klearstudy-backend.sabay.com";
 
 function authHeaders(extra = {}) {
   const headers = { ...extra };

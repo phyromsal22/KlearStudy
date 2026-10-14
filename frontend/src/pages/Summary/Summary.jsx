@@ -237,7 +237,7 @@ export default function Summary() {
 
     const apiBase = (
       import.meta.env.VITE_API_URL ||
-      "https://klearstudy-backend.onrender.com"
+      "https://klearstudy-backend.sabay.com"
     ).replace(/\/+$/, "");
 
     const response = await fetch(
