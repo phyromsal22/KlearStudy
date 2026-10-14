@@ -12,13 +12,14 @@ ENV VITE_API_URL=$VITE_API_URL
 
 RUN npm run build
 
-FROM nginxinc/nginx-unprivileged:alpine
+# ប្តូរពី nginx-unprivileged ទៅ nginx:alpine ធម្មតា
+FROM nginx:alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# ចម្លង Config ផ្ទាល់ខ្លួនទៅជំនួស default.conf ដែលមានស្រាប់
+# ជំនួស default.conf ដែលមានស្រាប់
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
-# មិនកំណត់ CMD ទេ ដើម្បីឱ្យវាប្រើ Entrypoint ដើមរបស់ Image
+# ប្តូរ Port នៅក្នុង nginx.conf ទៅ 8080 (ឬក៏ប្តូរទៅ 80)
