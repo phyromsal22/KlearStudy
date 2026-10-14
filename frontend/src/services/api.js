@@ -594,7 +594,7 @@ export async function getSavedAnalysis(
   lessonId
 ) {
   return request(
-    `/lessons/${lessonId}/analysis/saved`
+        `${API_BASE}/lessons/${lessonId}/analysis/saved`
   );
 }
 
@@ -603,7 +603,7 @@ export async function runAIAnalysis(
   lessonId
 ) {
   return request(
-    `/lessons/${lessonId}/analysis/ai`,
+        `${API_BASE}/lessons/${lessonId}/analysis/ai`,
     {
       method: "POST",
     }
@@ -615,7 +615,7 @@ export async function reanalyzeLesson(
   lessonId
 ) {
   return request(
-    `/lessons/${lessonId}/analysis/reanalyze`,
+      `${API_BASE}/lessons/${lessonId}/analysis/reanalyze`,
     {
       method: "POST",
     }
@@ -710,7 +710,7 @@ export async function askAI(
   provider = "auto"
 ) {
   return request(
-    `/lessons/${lessonId}/ask`,
+      `${API_BASE}/lessons/${lessonId}/ask`,
     {
       method: "POST",
 
@@ -742,7 +742,7 @@ export async function getLearningIntelligence(
     });
 
   return request(
-    `/progress/learning-intelligence?${query.toString()}`,
+      `${API_BASE}/progress/learning-intelligence?${query.toString()}`,
     {
       method: "GET",
     }
@@ -769,7 +769,7 @@ export async function generateQCMForLesson(
   provider = "auto"
 ) {
   return request(
-    `/qcm/lessons/${lessonId}`,
+        `${API_BASE}/qcm/lessons/${lessonId}`,
     {
       method: "POST",
 
@@ -800,7 +800,7 @@ export async function generateQCMFromText(
   provider = "auto"
 ) {
   return request(
-    `/qcm/generate`,
+    `${API_BASE}/qcm/generate`,
     {
       method: "POST",
 
@@ -830,7 +830,7 @@ export async function getQCM(
   qcmSetId
 ) {
   return request(
-    `/qcm/${qcmSetId}`,
+    `${API_BASE}/qcm/${qcmSetId}`,
     {
       method: "GET",
     }
@@ -846,7 +846,7 @@ export async function getLessonQCMs(
   lessonId
 ) {
   return request(
-    `/qcm/lesson/${lessonId}`,
+    `${API_BASE}/qcm/lesson/${lessonId}`,
     {
       method: "GET",
     }
