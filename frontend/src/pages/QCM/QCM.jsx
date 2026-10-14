@@ -10,6 +10,12 @@ import {
 import "../../styles/qcm.css";
 
 
+// ✅ កែនៅទីនេះ (ទី ១)៖ បន្ថែម API_BASE នៅខាងលើឯកសារ
+const API_BASE =
+  import.meta.env.VITE_API_URL?.replace(/\/$/, "") ||
+  "https://klearstudy-backend-1fvgp1mv5h8lur.sabay.com";
+
+
 /* =========================================================
    HELPERS
 ========================================================= */
@@ -385,9 +391,10 @@ export default function QCM() {
 
     }
 
+    // ✅ កែនៅទីនេះ (ទី ២)៖ បន្ថែម ${API_BASE} នៅខាងមុខ URL
     const response =
       await fetch(
-        `/attempts/start/${qcmSetId}`,
+        `${API_BASE}/attempts/start/${qcmSetId}`,
         {
           method: "POST",
           headers: {
@@ -490,9 +497,10 @@ export default function QCM() {
         }
       );
 
+    // ✅ កែនៅទីនេះ (ទី ៣)៖ បន្ថែម ${API_BASE} នៅខាងមុខ URL
     const response =
       await fetch(
-        "/attempts/finish",
+        `${API_BASE}/attempts/finish`,
         {
           method: "POST",
           headers: {
