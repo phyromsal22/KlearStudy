@@ -7,7 +7,7 @@ RUN npm ci
 
 COPY . .
 
-ARG VITE_API_URL
+ARG VITE_API_URL=https://klearstudy-backend-1fvgp1mv5h8lur.sabay.com
 ENV VITE_API_URL=$VITE_API_URL
 
 RUN npm run build
