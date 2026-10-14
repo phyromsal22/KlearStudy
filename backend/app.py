@@ -79,14 +79,7 @@ app.include_router(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5173",
-        "http://localhost:5173",
-        "http://127.0.0.1:3000",
-        "http://localhost:3000",
-        "http://localhost:8080",
-        "https://klearstudy-frontend.sabay.com",
-    ],
+    allow_origins=["*"], # អនុញ្ញាតគ្រប់ URL សម្រាប់ការសាកល្បង (អ្នកអាចកំណត់ URL ជាក់លាក់នៅពេលក្រោយ)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
