@@ -1,21 +1,12 @@
-FROM node:22-alpine AS build
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ARG VITE_API_URL=https://klearstudy-backend-1fvgp1mv5h8lur.sabay.com
-ENV VITE_API_URL=$VITE_API_URL
+EXPOSE 8000
 
-RUN npm run build
-
-FROM nginxinc/nginx-unprivileged:alpine
-
-COPY --from=build /app/dist /usr/share/nginx/html
-
-EXPOSE 8080
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}"]
