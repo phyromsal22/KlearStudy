@@ -13,5 +13,4 @@ PyJWT
 pwdlib[argon2]
 PyMuPDF
 openai
-psycopg2-binary
 psycopg[binary]
