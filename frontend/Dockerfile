@@ -16,9 +16,7 @@ FROM nginxinc/nginx-unprivileged:alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /app/nginx.conf
-CMD ["nginx", "-c", "/app/nginx.conf", "-g", "daemon off;"]
 
 EXPOSE 8080
 
-ENTRYPOINT []
-CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "pid /tmp/nginx.pid; daemon off;"]
+CMD ["nginx", "-c", "/app/nginx.conf", "-g", "daemon off;"]
